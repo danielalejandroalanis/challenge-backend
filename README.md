@@ -78,4 +78,18 @@ Utilizar script install.sh en:
 
 > npm start
 
+**Pruebas en localhost:**
+
+Get currencies:
+> http://localhost:3000/currencies
+
+Obtener rates (solo la última de cada una):
+> http://localhost:3000/rates
+
+Obtener rates (según symbol):
+> http://localhost:3000/rates/ada
+
+> http://localhost:3000/rates/btc
+
+> http://localhost:3000/rates/eth
 
