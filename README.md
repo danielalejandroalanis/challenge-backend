@@ -86,6 +86,17 @@ Get currencies:
 Obtener rates (solo la última de cada una):
 > http://localhost:3000/rates
 
+Post nueva rate (solo la última de cada una):
+> http://localhost:3000/rates
+```json
+{
+    “id_currency” : 1,
+    “value” : 11934.231233
+}
+```
+
+
+
 Obtener rates (según symbol):
 > http://localhost:3000/rates/ada
 
