@@ -20,12 +20,12 @@
     - MySql
     - Steplix Microservice
     - DBeaver-ce
+    - pm2
 
 ## Estructura del proyecto
 
 ```bash
 ├── node_modules
-├── public
 ├── core
 │   ├── config
 │   ├── controllers
@@ -33,7 +33,6 @@
 │   ├── index.js
 ├── mysql
 │   ├── database
-│   ├── scripts
 │   ├── tables
 ├── .env
 ├── .gitignore
@@ -47,26 +46,36 @@
 
 **Clonar repositorio:** 
 
-> git clone https://github.com/danielalejandroalanis/frontend-controlusuario.git
+> git clone https://github.com/danielalejandroalanis/challenge-backend
 
 **Instalar dependencias**
 
 > npm i
 
+**Ejecutar docker-compose**
+
+En la raiz del proyecto:
+
+> sudo docker-compose up -d --build
+
+**Conexión a DB:**
+
+> user: root
+> password: SECRET_KEY
+
+**Creación de tablas:**
+
+Utilizar script install.sh en:
+
+> ./install.sh
+
+```bash
+├── mysql
+│   ├── scripts
+```
+
 **Ejecución en consola:**
 
 > npm start
-
-## Pantallas
-
-### Home
-
-En esta vista se podrá visualizar la lista (en forma de tabla) de usuarios cargados. Además, con el botón de la columna *Acción*, podremos ver la información detallada (en un modal) con datos no incluidos en la tabla.
-
-En el recuadro de *Busqueda por Nombre*, podremos filtrar los usuarios según el criterio *Nombre*.
-
-### Crear Usuario
-
-Podremos crear un nuevo usuario haciendo uso de esta pantalla. Deberemos rellenar el formulario, y una vez se presiona el botón *Crear Usuario*, se cargará el nuevo usuario en la base de datos devolviendonos el ID del mismo. Podremos corroborar esto en el **Home**.
 
 
